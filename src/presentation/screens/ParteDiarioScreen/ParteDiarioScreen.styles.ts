@@ -1,0 +1,116 @@
+import {StyleSheet} from 'react-native';
+
+export const parteDiarioScreenStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#e5e7eb',
+  },
+  header: {
+    padding: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  filterSection: {
+    backgroundColor: '#fff',
+    padding: 16,
+    marginBottom: 1,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e5e7eb',
+  },
+  filterRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+  },
+  filterRow2: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginTop: 10,
+  },
+  input: {
+    width: '48%',
+    minWidth: 140,
+    borderWidth: 1,
+    borderColor: '#d1d5db',
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 14,
+    color: '#1f2937',
+    backgroundColor: '#f9fafb',
+  },
+  dateInput: {
+    width: '48%',
+    minWidth: 140,
+    borderWidth: 1,
+    borderColor: '#d1d5db',
+    borderRadius: 8,
+    padding: 12,
+    justifyContent: 'center',
+    backgroundColor: '#f9fafb',
+  },
+  dateInputText: {
+    fontSize: 14,
+    color: '#1f2937',
+  },
+  datePlaceholder: {
+    color: '#6b7280',
+  },
+  addButton: {
+    backgroundColor: '#2563eb',
+    padding: 12,
+    borderRadius: 8,
+    alignSelf: 'flex-start',
+    minWidth: 100,
+    alignItems: 'center',
+  },
+  addButtonText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  backButtonText: {
+    color: '#2563eb',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  headerTitle: {
+    color: '#1f2937',
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  list: {
+    flex: 1,
+    paddingHorizontal: 12,
+    paddingTop: 8,
+  },
+  pagination: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+    gap: 12,
+    backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderTopColor: '#e5e7eb',
+  },
+  pageText: {
+    fontSize: 14,
+    color: '#374151',
+    fontWeight: '500',
+  },
+  pageTextDisabled: {
+    color: '#9ca3af',
+  },
+  empty: {
+    padding: 32,
+    textAlign: 'center',
+    color: '#6b7280',
+    fontSize: 15,
+    backgroundColor: '#fff',
+    marginHorizontal: 12,
+    marginTop: 8,
+    borderRadius: 8,
+  },
+});

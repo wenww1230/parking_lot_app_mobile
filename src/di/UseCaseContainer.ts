@@ -1,0 +1,34 @@
+import {AuthUseCase} from '../domain/usecases/AuthUseCase';
+import {ClientUseCase} from '../domain/usecases/ClientUseCase';
+import {VehicleUseCase} from '../domain/usecases/VehicleUseCase';
+import {ParkingRecordUseCase} from '../domain/usecases/ParkingRecordUseCase';
+import {TariffUseCase} from '../domain/usecases/TariffUseCase';
+import {DebtReportUseCase} from '../domain/usecases/DebtReportUseCase';
+import {PaymentUseCase} from '../domain/usecases/PaymentUseCase';
+import {UserRepositoryImpl} from '../data/repositories/UserRepositoryImpl';
+import {SessionRepositoryImpl} from '../data/repositories/SessionRepositoryImpl';
+import {ClientRepositoryImpl} from '../data/repositories/ClientRepositoryImpl';
+import {VehicleRepositoryImpl} from '../data/repositories/VehicleRepositoryImpl';
+import {ClientVehicleRepositoryImpl} from '../data/repositories/ClientVehicleRepositoryImpl';
+import {ParkingRecordRepositoryImpl} from '../data/repositories/ParkingRecordRepositoryImpl';
+import {TariffRepositoryImpl} from '../data/repositories/TariffRepositoryImpl';
+import {DebtReportRepositoryImpl} from '../data/repositories/DebtReportRepositoryImpl';
+import {PaymentRepositoryImpl} from '../data/repositories/PaymentRepositoryImpl';
+
+const userRepo = new UserRepositoryImpl();
+const sessionRepo = new SessionRepositoryImpl();
+const clientRepo = new ClientRepositoryImpl();
+const vehicleRepo = new VehicleRepositoryImpl();
+const clientVehicleRepo = new ClientVehicleRepositoryImpl();
+const parkingRecordRepo = new ParkingRecordRepositoryImpl();
+const tariffRepo = new TariffRepositoryImpl();
+const debtReportRepo = new DebtReportRepositoryImpl();
+const paymentRepo = new PaymentRepositoryImpl();
+
+export const authUseCase = new AuthUseCase(userRepo, sessionRepo);
+export const clientUseCase = new ClientUseCase(clientRepo);
+export const vehicleUseCase = new VehicleUseCase(vehicleRepo, clientVehicleRepo);
+export const parkingRecordUseCase = new ParkingRecordUseCase(parkingRecordRepo);
+export const tariffUseCase = new TariffUseCase(tariffRepo);
+export const debtReportUseCase = new DebtReportUseCase(debtReportRepo);
+export const paymentUseCase = new PaymentUseCase(paymentRepo);
